@@ -262,16 +262,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('language') || 'fr';
     setLanguage(savedLang);
 
-    // ===== SLIDER D'IMAGES AUTOMATIQUE =====
+  
     const imageSlider = () => {
-        const images = document.querySelectorAll('.home-img .slider-image');
+        // MODIFICATION : On cible maintenant le slider dans la section "about"
+        const images = document.querySelectorAll('.about-img-slider .slider-image');
         if (images.length > 1) {
             let currentImageIndex = 0;
             setInterval(() => {
                 images[currentImageIndex].classList.remove('active');
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 images[currentImageIndex].classList.add('active');
-            }, 4000);
+            }, 4000); // Change d'image toutes les 4 secondes
         }
     };
     imageSlider();
