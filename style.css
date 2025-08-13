@@ -219,14 +219,20 @@ span {
     margin-top: 3rem;
 }
 .home-img {
-    width: 30vw;
+    width: 30vw; /* Définit la largeur du cercle */
+    height: 30vw; /* La même valeur que la largeur pour un cercle parfait */
+    border-radius: 50%; /* C'est la propriété magique qui arrondit les coins */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent du cercle */
+    box-shadow: 0 0 2rem var(--main-color);
     animation: floatImage 4s ease-in-out infinite;
 }
+
 .home-img img {
     width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 2rem var(--main-color);
+    height: 100%;
+    object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
 }
+
 @keyframes floatImage {
     0% { transform: translateY(0); }
     50% { transform: translateY(-2.4rem); }
@@ -559,3 +565,129 @@ html[dir="rtl"] .form-group label { text-align: right; }
     html[dir="rtl"] .experience-card { flex-direction: column; }
 }
 @media (max-width: 450px) { html { font-size: 50%; } }
+
+/* ==================== SECTION ABOUT (NOUVEAU DESIGN) ==================== */
+.about {
+    background: var(--second-bg-color);
+}
+.about-main-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.about-img-slider {
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem var(--shadow-color);
+}
+.about-img-slider .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.about-img-slider .slider-image.active {
+    opacity: 1;
+}
+.about-content { 
+    flex: 1; 
+}
+.about-content h2 { 
+    text-align: left; 
+    line-height: 1.2; 
+}
+.about-content h3 { 
+    font-size: 2.6rem; 
+}
+.about-content p { 
+    font-size: 1.6rem; 
+    margin: 2rem 0 3rem; 
+}
+
+/* Styles pour les onglets (Tabs) */
+.about-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.tab-link {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.7;
+    position: relative;
+    transition: opacity .3s;
+}
+.tab-link.active {
+    opacity: 1;
+    color: var(--main-color);
+}
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--main-color);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn .5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.soft-skills-list {
+    list-style: none;
+    padding: 1rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.soft-skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.6rem;
+}
+.soft-skills-list i {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Responsive pour la section About */
+@media (max-width: 991px) {
+    .about-main-content {
+        flex-direction: column;
+    }
+    .about-img-slider {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+@media (max-width: 768px) {
+    .about-img-slider {
+        width: 70vw;
+        height: 70vw;
+    }
+}

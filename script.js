@@ -103,7 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fr: {
             page_title: "Portfolio | Hamza Abid",
              home_intro: "Développeur Full-Stack passionné, spécialisé en Java, Spring, Angular et React. Je transforme des idées complexes en applications web et mobiles performantes et innovantes.",
-            // REMPLACEZ home_cv_button PAR CES DEUX LIGNES :
+            tab_soft_skills: "Soft Skills",
+            tab_languages: "Langues",
+            tab_interests: "Centres d'intérêt",
             home_view_cv_button: "Voir CV <i class='fa-solid fa-eye'></i>",
             home_download_cv_button: "Télécharger mon CV <i class='fa-solid fa-download'></i>",
             about_heading: "À Propos de <span>Moi</span>",
@@ -141,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
             page_title: "Portfolio | Hamza Abid",
             
              home_intro: "Passionate Full-Stack Developer specializing in Java, Spring, Angular, and React. I transform complex ideas into high-performance and innovative web and mobile applications.",
-            // REMPLACEZ home_cv_button PAR CES DEUX LIGNES :
+            tab_soft_skills: "Soft Skills",
+            tab_languages: "Languages",
+            tab_interests: "Interests",
             home_view_cv_button: "View CV <i class='fa-solid fa-eye'></i>",
             home_download_cv_button: "Download CV <i class='fa-solid fa-download'></i>",
             about_heading: "About <span>Me</span>",
@@ -178,7 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ar: {
             page_title: "ملف أعمال | حمزة عبيد",
               home_intro: "مطور فول ستاك شغوف، متخصص في Java، Spring، Angular، و React. أحول الأفكار المعقدة إلى تطبيقات ويب وموبايل مبتكرة وعالية الأداء.",
-            // REMPLACEZ home_cv_button PAR CES DEUX LIGNES :
+            tab_soft_skills: "المهارات الشخصية",
+            tab_languages: "اللغات",
+            tab_interests: "الاهتمامات",
             home_view_cv_button: "عرض السيرة الذاتية <i class='fa-solid fa-eye'></i>",
             home_download_cv_button: "تحميل السيرة الذاتية <i class='fa-solid fa-download'></i>",
             about_heading: "<span>عني</span>",
@@ -306,5 +312,21 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             disableDarkMode();
         }
+    });
+        const tabs = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document.getElementById(tab.dataset.tab);
+
+            // Gérer les classes actives pour les boutons
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Gérer les classes actives pour le contenu
+            tabContents.forEach(content => content.classList.remove('active'));
+            target.classList.add('active');
+        });
     });
 });
