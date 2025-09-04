@@ -11,17 +11,18 @@
 <body>
 
     <header class="header">
-       <a  class="logo">Hamza Abid</a>
+       <a  class="logo">Hamza</a>
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active" data-translate="nav_home">Accueil</a>
             <a href="#about" data-translate="nav_about">À Propos</a>
-             <a href="#experience" data-translate="nav_experience">Expériences</a>
+            <a href="#experience" data-translate="nav_experience">Expériences</a>
             <a href="#skills" data-translate="nav_skills">Compétences</a>
             <a href="#education" data-translate="nav_education">Formation</a>
             <a href="#projects" data-translate="nav_projects">Projets</a>
-            <a href="#contact" data-translate="nav_contact">Contact</a>
+            <a href="#additional-info" data-translate="nav_additional_info">Plus d'Infos</a>
+            <a href="#contact" data-translate="nav_contact">Contact</a> <!-- Déplacé à la fin -->
         </nav>
         <div class="lang-switcher">
             <div class="selected-lang">
@@ -68,43 +69,9 @@
         <div class="about-content">
             <h2 class="heading" data-translate="about_heading">À Propos de <span>Moi</span></h2>
             <h3 data-translate="about_subtitle">Développeur Full-Stack</h3>
-            <p data-translate="about_p1">Diplômé de l'École Marocaine des Sciences de l'Ingénieur (EMSI), ma passion pour la technologie me pousse à concevoir des solutions robustes et élégantes. Mon expertise couvre à la fois le backend avec l'écosystème Java/Spring et le frontend avec des frameworks modernes comme Angular et React, ainsi que le développement mobile avec Flutter.</p>
-            
-            <!-- Système d'onglets -->
-            <div class="about-tabs">
-                <button class="tab-link active" data-tab="soft-skills" data-translate="tab_soft_skills">Soft Skills</button>
-                <button class="tab-link" data-tab="languages" data-translate="tab_languages">Langues</button>
-                <button class="tab-link" data-tab="interests" data-translate="tab_interests">Centres d'intérêt</button>
-            </div>
+            <p data-translate="about_p1"> Ingénieur en Informatique et Réseaux, je suis un développeur Full-Stack passionné par l’innovation, avec une double expertise en applications web et mobiles. Mon parcours m’a permis de concevoir et de déployer des projets concrets en Java/Spring Boot, Angular, React et Flutter, en intégrant APIs, sécurité, performance et expérience utilisateur. Animé par la curiosité et le goût du défi, je m’investis pleinement dans chaque projet, en favorisant la collaboration, l’apprentissage continu et la recherche de solutions à forte valeur ajoutée.
 
-            <div class="tab-content-container">
-                <!-- Contenu Soft Skills -->
-                <div class="tab-content active" id="soft-skills">
-                    <ul class="soft-skills-list">
-                        <li data-translate="ss_autonomy"><i class="fa-solid fa-star"></i>Autonomie</li>
-                        <li data-translate="ss_communication"><i class="fa-solid fa-comments"></i>Communication</li>
-                        <li data-translate="ss_rigor"><i class="fa-solid fa-ruler-combined"></i>Rigueur</li>
-                        <li data-translate="ss_teamwork"><i class="fa-solid fa-users"></i>Esprit d’équipe</li>
-                        <li data-translate="ss_problem_solving"><i class="fa-solid fa-lightbulb"></i>Résolution de problèmes</li>
-                        <li data-translate="ss_curiosity"><i class="fa-solid fa-magnifying-glass"></i>Curiosité technique</li>
-                    </ul>
-                </div>
-                <!-- Contenu Langues -->
-                <div class="tab-content" id="languages">
-                    <ul class="soft-skills-list">
-                        <li data-translate="lang_en"><i class="fa-solid fa-language"></i>Anglais : Langue de formation</li>
-                        <li data-translate="lang_ar"><i class="fa-solid fa-language"></i>Arabe : Maternel</li>
-                        <li data-translate="lang_fr"><i class="fa-solid fa-language"></i>Français : Courant</li>
-                    </ul>
-                </div>
-                <!-- Contenu Centres d'intérêt -->
-                <div class="tab-content" id="interests">
-                    <ul class="soft-skills-list">
-                        <li data-translate="int_fitness"><i class="fa-solid fa-dumbbell"></i>Musculation & bien-être physique</li>
-                        <li data-translate="int_travel"><i class="fa-solid fa-plane"></i>Voyages & cultures</li>
-                    </ul>
-                </div>
-            </div>
+            </p>
         </div>
     </div>
 </section>
@@ -326,6 +293,43 @@
     </div>
 </section>
 
+    <!-- ==================== NOUVELLE SECTION : INFORMATIONS COMPLÉMENTAIRES ==================== -->
+    <section class="additional-info" id="additional-info">
+        <h2 class="heading" data-translate="additional_info_heading">Plus d'<span>Infos</span></h2>
+        <div class="additional-info-container">
+            <!-- Soft Skills -->
+            <div class="info-card soft-skills-card">
+                <h3 data-translate="tab_soft_skills"><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+                <ul class="info-list">
+                    <li data-translate="ss_autonomy"><i class="fa-solid fa-person-digging"></i> Autonomie</li>
+                    <li data-translate="ss_communication"><i class="fa-solid fa-handshake-angle"></i> Communication</li>
+                    <li data-translate="ss_rigor"><i class="fa-solid fa-magnifying-glass-chart"></i> Rigueur</li>
+                    <li data-translate="ss_teamwork"><i class="fa-solid fa-people-group"></i> Esprit d’équipe</li>
+                    <li data-translate="ss_problem_solving"><i class="fa-solid fa-lightbulb"></i> Résolution de problèmes</li>
+                    <li data-translate="ss_curiosity"><i class="fa-solid fa-flask-vial"></i> Curiosité technique</li>
+                </ul>
+            </div>
+
+            <!-- Langues -->
+            <div class="info-card languages-card">
+                <h3 data-translate="tab_languages"><i class="fa-solid fa-globe"></i> Langues</h3>
+                <ul class="info-list">
+                    <li data-translate="lang_en"><i class="fa-solid fa-flag-usa"></i> Anglais : Langue de formation</li>
+                    <li data-translate="lang_ar"><i class="fa-solid fa-flag-alt"></i> Arabe : Maternel</li>
+                    <li data-translate="lang_fr"><i class="fa-solid fa-flag-france"></i> Français : Courant</li>
+                </ul>
+            </div>
+
+            <!-- Centres d'intérêt -->
+            <div class="info-card interests-card">
+                <h3 data-translate="tab_interests"><i class="fa-solid fa-heart"></i> Centres d'intérêt</h3>
+                <ul class="info-list">
+                    <li data-translate="int_fitness"><i class="fa-solid fa-dumbbell"></i> Musculation & bien-être physique</li>
+                    <li data-translate="int_travel"><i class="fa-solid fa-plane-departure"></i> Voyages & cultures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
    
 
     <section class="contact" id="contact">
