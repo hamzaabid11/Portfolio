@@ -120,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
             project4_desc: "Application de gestion de tâches avec authentification sécurisée via Keycloak et interface web responsive.",
             project5_title: "Plateforme E-Vêtements",
             project5_desc: "Développement d’une plateforme e-commerce simple dédiée à la vente de vêtements.",
+            project6_desc:"Projet CRUD de gestion de crédit développé en ASP.NET, offrant une interface conviviale pour gérer efficacement les demandes de crédit.",
+            project6_title:"E-Credit Management",
             
             contact_heading: "Contactez-<span>Moi !</span>",
             nav_home: "Accueil", nav_about: "À Propos", nav_skills: "Compétences", nav_experience: "Expériences", nav_education: "Formation", nav_projects: "Projets", nav_contact: "Contact",
@@ -160,6 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
             project4_desc: "Task management application with secure authentication via Keycloak and a responsive web interface.",
             project5_title: "E-Clothing Platform",
             project5_desc: "Development of a simple e-commerce platform dedicated to selling clothes.",
+            project6_title: "E-Credit Management",
+            project6_desc: "CRUD project for credit management developed using ASP.NET, providing a user-friendly interface for efficiently managing credit requests.",
 
             contact_heading: "Contact <span>Me!</span>",
             nav_home: "Home", nav_about: "About", nav_skills: "Skills", nav_experience: "Experience", nav_education: "Education", nav_projects: "Projects", nav_contact: "Contact",
@@ -199,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
             project4_desc: "تطبيق لإدارة المهام مع مصادقة آمنة عبر Keycloak وواجهة ويب متجاوبة.",
             project5_title: "منصة ملابس إلكترونية",
             project5_desc: "تطوير منصة تجارة إلكترونية بسيطة مخصصة لبيع الملابس.",
+            project6_title: "إدارة القروض إلكترونياً",
+            project6_desc: "مشروع CRUD لإدارة القروض مطوّر باستخدام ASP.NET، يوفر واجهة سهلة الاستخدام لإدارة طلبات القروض بكفاءة.",
+
  contact_heading: "<span>اتصل بي</span>",
             nav_home: "الرئيسية", nav_about: "عني", nav_skills: "المهارات", nav_experience: "الخبرات", nav_education: "التعليم", nav_projects: "المشاريع", nav_contact: "اتصل بي",
             home_greeting: "مرحباً، أنا", home_role_prefix: "مهندس تطوير", home_intro: "مطور فول ستاك شغوف، متخصص في Java، Spring، Angular، و React. أحول الأفكار المعقدة إلى تطبيقات ويب وموبايل مبتكرة وعالية الأداء.", home_cv_button: "تحميل سيرتي الذاتية <i class='fa-solid fa-download'></i>",
