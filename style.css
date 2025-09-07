@@ -108,16 +108,10 @@ span {
     margin-right: auto;
 }
 
-.logo img {
-    height: 40px;
-    width: auto;
-}
-
-
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 2.5rem; /* <-- Valeur réduite pour gagner de la place */
+    margin-left: 3.5rem;
     font-weight: 500;
     transition: .3s;
 }
@@ -201,23 +195,31 @@ span {
     color: var(--text-color);
 }
 
-/* ==================== SECTION HOME ==================== */
+/* ==================== SECTION HOME (FUSIONNÉE AVEC ABOUT) ==================== */
 .home {
+    padding-bottom: 8rem;
+}
+
+.home-intro-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
 }
+
 .home-content { flex: 1; }
 .home-content h3 { font-size: 3.2rem; font-weight: 700; }
 .home-content h3:nth-of-type(2) { margin-bottom: 2rem; }
 .home-content h1 { font-size: 5.6rem; font-weight: 700; line-height: 1.3; }
 .home-content p { font-size: 1.6rem; }
+
 .home-buttons {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 3rem;
 }
+
 .home-img {
     width: 30vw;
     height: 30vw;
@@ -238,6 +240,7 @@ span {
     50% { transform: translateY(-2.4rem); }
     100% { transform: translateY(0); }
 }
+
 .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -252,21 +255,24 @@ span {
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
+
 .social-media a:hover {
     background: var(--main-color);
     color: var(--white-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-/* ==================== SECTION ABOUT (MODIFIÉE) ==================== */
-.about {
-    background: var(--second-bg-color);
-}
+/* Styles pour la partie "About" maintenant dans "Home" */
 .about-main-content {
     display: flex;
     align-items: center;
     gap: 4rem;
+    margin-top: 10rem;
+    background: var(--second-bg-color);
+    padding: 6rem 4rem;
+    border-radius: 2rem;
 }
+
 .about-img-slider {
     flex-shrink: 0;
     position: relative;
@@ -276,6 +282,7 @@ span {
     overflow: hidden;
     box-shadow: 0 .5rem 1rem var(--shadow-color);
 }
+
 .about-img-slider .slider-image {
     position: absolute;
     top: 0;
@@ -286,25 +293,35 @@ span {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
 .about-img-slider .slider-image.active {
     opacity: 1;
 }
-.about-content { 
-    flex: 1; 
-}
-.about-content h2 { 
-    text-align: left; 
-    line-height: 1.2; 
-}
-.about-content h3 { 
-    font-size: 2.6rem; 
-}
-.about-content p { 
-    font-size: 1.6rem; 
-    margin: 2rem 0 3rem; 
+
+.about-content {
+    flex: 1;
 }
 
+.about-content .heading {
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
 /* ==================== SECTION SKILLS ==================== */
+.skills {
+    background: var(--bg-color); /* Changé pour alterner avec le fond de "about" */
+}
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -351,67 +368,61 @@ body.dark-mode .experience-meta { color: #bbb; }
 .tech-tags span { background: var(--second-bg-color); color: var(--main-color); padding: .5rem 1rem; border-radius: .5rem; font-size: 1.2rem; font-weight: 600; }
 
 /* ==================== SECTION EDUCATION ==================== */
-/* ==================== SECTION EDUCATION ==================== */
-.education { 
-    background: var(--bg-color); 
+.education {
+    background: var(--bg-color);
 }
-.education-container { 
-    display: flex; 
-    gap: 4rem; 
-    align-items: flex-start; /* Aligne les colonnes en haut */
+.education-container {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
 }
-.education-column { 
-    flex: 1; 
+.education-column {
+    flex: 1;
 }
-.column-title { 
-    font-size: 2.5rem; 
-    margin-bottom: 2rem; 
-    display: flex; 
-    align-items: center; 
-    gap: 1rem; 
-    color: var(--main-color); 
+.column-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--main-color);
 }
-.education-box { 
-    display: flex; 
-    align-items: center; 
-    gap: 2rem; 
-    background: var(--second-bg-color); 
-    padding: 2rem; 
-    border-radius: 1.5rem; 
-    margin-bottom: 2rem; 
+.education-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
 }
-.education-logo img { 
-    width: 60px; 
-    height: 60px; 
-    object-fit: contain; 
+.education-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
-.education-content h4 { 
-    font-size: 1.8rem; 
-    margin-bottom: .5rem; 
+.education-content h4 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
 }
-.education-content p { 
-    font-size: 1.5rem; 
-    color: #555; 
+.education-content p {
+    font-size: 1.5rem;
+    color: #555;
 }
-body.dark-mode .education-content p { 
-    color: #bbb; 
+body.dark-mode .education-content p {
+    color: #bbb;
 }
-.education-date { 
-    font-weight: 600; 
-    color: var(--main-color); 
+.education-date {
+    font-weight: 600;
+    color: var(--main-color);
 }
-
-/* MODIFICATIONS CI-DESSOUS */
-
 .certification-list {
     list-style: none;
     padding: 0;
-    display: grid; /* Transforme la liste en grille */
-    /* Crée des colonnes qui s'adaptent automatiquement à la largeur de l'écran */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 1.5rem; /* Espace entre les certifications */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
-
 .certification-list li a {
     display: flex;
     align-items: center;
@@ -419,29 +430,28 @@ body.dark-mode .education-content p {
     background: var(--second-bg-color);
     padding: 1.5rem;
     border-radius: 1rem;
-    /* La marge du bas n'est plus nécessaire grâce au "gap" de la grille */
-    font-size: 1.4rem; /* Taille de police légèrement réduite pour mieux s'adapter */
+    font-size: 1.4rem;
     color: var(--text-color);
     transition: .3s ease;
-    height: 100%; /* Assure que les cartes dans une même ligne ont la même hauteur */
+    height: 100%;
 }
-
 .certification-list li a:hover {
     background: var(--main-color);
     color: var(--white-color);
-    transform: translateY(-.5rem); /* Effet de survol plus subtil */
+    transform: translateY(-.5rem);
 }
-
 .certification-list li a span {
     flex-grow: 1;
-    text-align: left; /* Assure que le texte est aligné à gauche */
+    text-align: left;
 }
-
 .certification-list li a i {
     font-size: 1.6rem;
 }
 
 /* ==================== SECTION PROJECTS ==================== */
+.projects {
+    background: var(--second-bg-color);
+}
 .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); gap: 2.5rem; }
 .projects-box { background: var(--card-bg-color); border-radius: 1.5rem; box-shadow: 0 .2rem .5rem var(--shadow-color); overflow: hidden; transition: transform .3s ease; }
 .projects-box:hover { transform: translateY(-1rem); }
@@ -451,7 +461,7 @@ body.dark-mode .education-content p {
 .project-tech { display: flex; flex-wrap: wrap; gap: .8rem; }
 .project-tech span { background: var(--second-bg-color); color: var(--main-color); padding: .5rem 1rem; border-radius: .5rem; font-size: 1.2rem; font-weight: 600; }
 
-/* ==================== NOUVELLE SECTION : ADDITIONAL INFO ==================== */
+/* ==================== SECTION ADDITIONAL INFO ==================== */
 .additional-info {
     background: var(--bg-color);
 }
@@ -514,10 +524,10 @@ body.dark-mode .education-content p {
 .interests-card { border-color: #9C27B0; }
 
 /* ==================== SECTION CONTACT ==================== */
-.contact { 
-    background: var(--second-bg-color); 
+.contact {
+    background: var(--second-bg-color);
 }
-.contact-container { 
+.contact-container {
     max-width: 90rem;
     margin: 0 auto;
     background: var(--card-bg-color);
@@ -525,7 +535,7 @@ body.dark-mode .education-content p {
     border-radius: 1.5rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
 }
-.contact form { 
+.contact form {
     width: 100%;
 }
 .form-row {
@@ -559,7 +569,7 @@ body.dark-mode .education-content p {
 .contact form textarea:focus {
     border-color: var(--main-color);
 }
-.contact form textarea { 
+.contact form textarea {
     resize: vertical;
     margin-bottom: 1.5rem;
 }
@@ -594,33 +604,54 @@ body.dark-mode .footer {
 .footer-iconTop a:hover { box-shadow: 0 0 1rem var(--main-color); }
 .footer-iconTop a i { font-size: 2.4rem; color: #333; }
 
-/* ==================== BOUTON DARK MODE ==================== */
-.floating-btn {
+/* ==================== BOUTONS FLOTTANTS ==================== */
+.floating-actions-container {
     position: fixed;
-    bottom: 90px;
+    bottom: 30px;
     right: 30px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espace entre les boutons */
+}
+
+.floating-btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--main-color);
-    color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 100;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--white-color);
 }
+
 .floating-btn:hover {
     transform: scale(1.1);
 }
-body.dark-mode .floating-btn {
+
+/* Style spécifique pour le bouton Contact */
+.contact-btn {
+    background-color: #e84393; /* Couleur rose de votre icône */
+}
+.contact-btn svg {
+    stroke: white;
+}
+
+/* Style spécifique pour le bouton Dark Mode */
+#darkModeToggle {
+    background-color: var(--main-color);
+    font-size: 2.2rem;
+}
+
+body.dark-mode #darkModeToggle {
     background-color: var(--card-bg-color);
     color: #ffd700;
     border: 1px solid #ffd700;
 }
+
 
 /* ==================== RESPONSIVE & RTL ==================== */
 html[dir="rtl"] .header { flex-direction: row-reverse; }
@@ -640,15 +671,23 @@ html[dir="rtl"] .contact-info .info-box i { margin-left: 1.5rem; margin-right: 0
 html[dir="rtl"] .form-group label { text-align: right; }
 
 @media (max-width: 1200px) { html { font-size: 55%; } .home-img { width: 35vw; height: 35vw; } }
-@media (max-width: 991px) { .header { padding: 2rem 3%; } section { padding: 10rem 3% 2rem; } .footer { padding: 2rem 3%; } .education-container { flex-direction: column; } .about-main-content { flex-direction: column; } .about-img-slider { width: 50vw; height: 50vw; } }
+@media (max-width: 991px) { 
+    .header { padding: 2rem 3%; } 
+    section { padding: 10rem 3% 2rem; } 
+    .footer { padding: 2rem 3%; } 
+    .education-container { flex-direction: column; } 
+    .home-intro-wrapper { flex-direction: column; min-height: auto; }
+    .home-content { order: 2; text-align: center; }
+    .home-img { order: 1; width: 50vw; height: 50vw; margin-top: 4rem; margin-bottom: 2rem; }
+    .about-main-content { flex-direction: column; } 
+    .about-img-slider { width: 50vw; height: 50vw; } 
+}
 @media (max-width: 768px) {
     #menu-icon { display: block; }
     .navbar { position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem 3%; background: var(--card-bg-color); border-top: .1rem solid var(--shadow-color); box-shadow: 0 .5rem 1rem var(--shadow-color); display: none; }
     .navbar.active { display: block; }
     .navbar a { display: block; font-size: 2rem; margin: 3rem 0; text-align: center; }
-    .home { flex-direction: column; }
-    .home-content { order: 2; text-align: center; }
-    .home-img { padding-left: 0; order: 1; width: 70vw; height: 70vw; margin-top: 4rem; margin-bottom: 2rem; }
+    .home-img { width: 70vw; height: 70vw; }
     .about-main-content { flex-direction: column-reverse; }
     .about-img-slider { width: 70vw; height: 70vw; margin-top: 4rem; }
     .experience-card { flex-direction: column; align-items: center; text-align: center; }
