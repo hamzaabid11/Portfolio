@@ -317,32 +317,73 @@ span {
     margin: 2rem 0 3rem;
 }
 
-
 /* ==================== SECTION SKILLS ==================== */
 .skills {
-    background: var(--bg-color); /* Changé pour alterner avec le fond de "about" */
+    background: var(--bg-color);
 }
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 2rem;
 }
+
 .skills-box {
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
+    padding: 3rem 2rem;
     border-radius: 2rem;
-    text-align: center;
     border: .2rem solid var(--bg-color);
-    transition: .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
 }
+
 .skills-box:hover {
     border-color: var(--main-color);
     transform: translateY(-1rem);
 }
-.skills-box i { font-size: 6rem; color: var(--main-color); }
-.skills-box h3 { font-size: 2.6rem; margin: 1rem 0; }
-.skills-box p { font-size: 1.4rem; }
 
+.skills-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.skills-header i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.skills-header h3 {
+    font-size: 2.2rem;
+    flex-grow: 1;
+}
+
+.skills-header .expand-icon {
+    font-size: 2rem;
+    transition: transform 0.4s ease;
+}
+
+/* Cacher les détails par défaut */
+.skills-box p {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-top: 2rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
+}
+
+/* CHANGEMENT ICI : Afficher les détails au survol (hover) */
+.skills-box:hover p {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* CHANGEMENT ICI : Faire tourner l'icône au survol (hover) */
+.skills-box:hover .expand-icon {
+    transform: rotate(45deg);
+}
 /* ==================== SECTION EXPERIENCE ==================== */
 .experience {
     background: var(--second-bg-color);
@@ -367,7 +408,11 @@ body.dark-mode .experience-meta { color: #bbb; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: .8rem; }
 .tech-tags span { background: var(--second-bg-color); color: var(--main-color); padding: .5rem 1rem; border-radius: .5rem; font-size: 1.2rem; font-weight: 600; }
 
-/* ==================== SECTION EDUCATION ==================== */
+
+
+       
+
+      /* ==================== SECTION EDUCATION ==================== */
 .education {
     background: var(--bg-color);
 }
@@ -378,6 +423,7 @@ body.dark-mode .experience-meta { color: #bbb; }
 }
 .education-column {
     flex: 1;
+    min-width: 0;
 }
 .column-title {
     font-size: 2.5rem;
@@ -387,6 +433,8 @@ body.dark-mode .experience-meta { color: #bbb; }
     gap: 1rem;
     color: var(--main-color);
 }
+
+/* Style pour les cartes de DIPLÔMES */
 .education-box {
     display: flex;
     align-items: center;
@@ -395,10 +443,24 @@ body.dark-mode .experience-meta { color: #bbb; }
     padding: 2rem;
     border-radius: 1.5rem;
     margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
 }
-.education-logo img {
+.education-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+.education-logo {
+    flex-shrink: 0;
     width: 60px;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.education-logo img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 .education-content h4 {
@@ -416,36 +478,113 @@ body.dark-mode .education-content p {
     font-weight: 600;
     color: var(--main-color);
 }
-.certification-list {
-    list-style: none;
-    padding: 0;
+
+/* ==================== STYLES SPÉCIFIQUES AUX CERTIFICATIONS (GRILLE 3x3) ==================== */
+.certification-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
     gap: 1.5rem;
 }
-.certification-list li a {
+
+.certification-item {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    flex-direction: column;
     background: var(--second-bg-color);
     padding: 1.5rem;
-    border-radius: 1rem;
-    font-size: 1.4rem;
-    color: var(--text-color);
-    transition: .3s ease;
-    height: 100%;
+    border-radius: 1.5rem;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    min-height: 180px;
+    justify-content: space-between;
 }
-.certification-list li a:hover {
-    background: var(--main-color);
-    color: var(--white-color);
-    transform: translateY(-.5rem);
+.certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.certification-list li a span {
+
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    min-height: 70px; /* Hauteur standard pour tous les en-têtes */
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: #3916ff;
+    flex-shrink: 0;
+}
+
+.cert-text {
     flex-grow: 1;
-    text-align: left;
 }
-.certification-list li a i {
+
+.cert-text h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cert-text p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.cert-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.cert-link-icon {
     font-size: 1.6rem;
+    color: #3916ff;
+    transition: color 0.3s ease;
+}
+.certification-item:hover .cert-link-icon {
+    color: var(--main-color);
+}
+
+/* Mode sombre pour les certifications */
+body.dark-mode .certification-item {
+    background: #261b1b; /* Jaune légèrement plus foncé en mode sombre */
+    color: #ffffff; /* Texte plus foncé pour contraste */
+}
+
+body.dark-mode .cert-text p {
+    color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
+    }
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+    }
+    
+    .certification-grid {
+        grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .cert-header {
+        min-height: 60px;
+    }
 }
 
 /* ==================== SECTION PROJECTS ==================== */
@@ -580,6 +719,7 @@ body.dark-mode .education-content p {
 }
 
 /* ==================== FOOTER ==================== */
+/* ==================== FOOTER ==================== */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -587,11 +727,56 @@ body.dark-mode .education-content p {
     flex-wrap: wrap;
     padding: 2rem 7%;
     background: var(--main-color);
+    gap: 1.5rem; /* Ajoute de l'espace si les éléments se superposent sur mobile */
 }
 body.dark-mode .footer {
     background: #1e1e1e;
 }
-.footer-text p { color: var(--white-color); }
+
+.footer-text {
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.footer-text p {
+    margin-bottom: 1rem;
+}
+
+/* NOUVEAU : Style pour aligner l'email et les icônes */
+.footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
+    gap: 2.5rem; /* Espace entre l'email et les icônes sociales */
+}
+
+.footer-links a {
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* NOUVEAU : Style pour le groupe d'icônes sociales */
+.footer-social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social-icons a i {
+    font-size: 2.2rem; /* Taille des icônes sociales */
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover i {
+    transform: scale(1.2); /* Effet de grossissement au survol */
+}
+
 .footer-iconTop a {
     display: inline-flex;
     justify-content: center;
@@ -601,9 +786,13 @@ body.dark-mode .footer {
     border-radius: .8rem;
     transition: .5s ease;
 }
-.footer-iconTop a:hover { box-shadow: 0 0 1rem var(--main-color); }
-.footer-iconTop a i { font-size: 2.4rem; color: #333; }
-
+.footer-iconTop a:hover { 
+    box-shadow: 0 0 1rem var(--main-color); 
+}
+.footer-iconTop a i { 
+    font-size: 2.4rem; 
+    color: #333; 
+}
 /* ==================== BOUTONS FLOTTANTS ==================== */
 .floating-actions-container {
     position: fixed;

@@ -163,143 +163,234 @@
     <h2 class="heading" data-translate="skills_heading">Mes <span>Compétences</span></h2>
     <div class="skills-container">
         <div class="skills-box">
-            <i class="fa-solid fa-server"></i>
-            <h3 data-translate="skills_backend_title">Backend</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-server"></i>
+                <h3 data-translate="skills_backend_title">Backend</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_backend_desc">Spring Boot, Spring Cloud, Resilience4J, Kafka, Docker, Kubernetes, Django, Flask, Node.js (Express), RESTful APIs Integration.</p>
         </div>
         <div class="skills-box">
-            <i class="fa-solid fa-desktop"></i>
-            <h3 data-translate="skills_frontend_title">Frontend</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-desktop"></i>
+                <h3 data-translate="skills_frontend_title">Frontend</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_frontend_desc">Angular, Flutter, React Developer, Bootstrap 5, Tailwind CSS, Responsive Design, UI/UX Integration.</p>
         </div>
         <div class="skills-box">
-            <i class="fa-solid fa-code"></i>
-            <h3 data-translate="skills_languages_title">Langages de programmation</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-code"></i>
+                <h3 data-translate="skills_languages_title">Langages de programmation</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_languages_desc">Java, Python, Dart, C#, JavaScript (ES6+), TypeScript, SQL, PL/SQL, HTML5 / CSS3.</p>
         </div>
         <div class="skills-box">
-            <i class="fa-solid fa-database"></i>
-            <h3 data-translate="skills_db_title">Bases de données</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-database"></i>
+                <h3 data-translate="skills_db_title">Bases de données</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_db_desc">Oracle, SQL Server, PostgreSQL, MySQL, MongoDB.</p>
         </div>
         <div class="skills-box">
-            <i class="fa-solid fa-sitemap"></i>
-            <h3 data-translate="skills_arch_title">Architectures</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-sitemap"></i>
+                <h3 data-translate="skills_arch_title">Architectures</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_arch_desc">Microservices, Design Patterns, MVC, monolithic.</p>
         </div>
         <div class="skills-box">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h3 data-translate="skills_tools_title">IDE & Outils</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3 data-translate="skills_tools_title">IDE & Outils</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_tools_desc">IntelliJ IDEA, Visual Studio Code, Eclipse, Android Studio, Postman, Git, GitHub, GitLab.</p>
         </div>
-        <!-- NOUVELLE CATÉGORIE AJOUTÉE -->
         <div class="skills-box">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-            <h3 data-translate="skills_devops_title">DevOps & Cloud</h3>
+            <div class="skills-header">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h3 data-translate="skills_devops_title">DevOps & Cloud</h3>
+                <i class="fa-solid fa-plus expand-icon"></i> <!-- Icône ajoutée -->
+            </div>
             <p data-translate="skills_devops_desc">Docker, Kubernetes, CI/CD Pipelines.</p>
         </div>
     </div>
 </section>
-
 <section class="education" id="education">
-    <h2 class="heading" data-translate="education_heading">Formation & <span>Certifications</span></h2>
-    <div class="education-container">
-        <div class="education-column">
-            <h3 class="column-title" data-translate="education_degrees_title"><i class="fa-solid fa-graduation-cap"></i> Diplômes</h3>
-            <div class="education-box">
-                <div class="education-logo"><img src="assets/logo-emsi.png" alt="Logo EMSI"></div>
-                <div class="education-content">
-                    <h4 data-translate="degree1_title">Ingénieur en Informatique et Réseaux</h4>
-                    <p data-translate="degree1_school">EMSI - École Marocaine des Sciences de l’Ingénieur</p>
-                    <p class="education-date">2020 - 2025</p>
+        <h2 class="heading" data-translate="education_heading">Formation & <span>Certifications</span></h2>
+        <div class="education-container">
+            <!-- ==================== COLONNE DIPLÔMES ==================== -->
+            <div class="education-column">
+                <h3 class="column-title" data-translate="education_degrees_title"><i class="fa-solid fa-graduation-cap"></i> Diplômes</h3>
+                <div class="education-box">
+                    <div class="education-logo"><i class="fas fa-university" style="font-size: 2.5rem; color: #754ef9;"></i></div>
+                    <div class="education-content">
+                        <h4 data-translate="degree1_title">Ingénieur en Informatique et Réseaux</h4>
+                        <p data-translate="degree1_school">EMSI - École Marocaine des Sciences de l'Ingénieur</p>
+                        <p class="education-date">2020 - 2025</p>
+                    </div>
+                </div>
+                <div class="education-box">
+                    <div class="education-logo"><i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #754ef9;"></i></div>
+                    <div class="education-content">
+                        <h4 data-translate="degree2_title">Baccalauréat en Sciences Physiques</h4>
+                        <p data-translate="degree2_school">Lycée Oulad Hriz, Berrechid</p>
+                        <p class="education-date">2019 - 2020</p>
+                    </div>
                 </div>
             </div>
-            <div class="education-box">
-                <div class="education-logo"><img src="assets/logo-bac.png" alt="Logo Baccalauréat"></div>
-                <div class="education-content">
-                    <h4 data-translate="degree2_title">Baccalauréat en Sciences Physiques</h4>
-                    <p data-translate="degree2_school">Lycée Oulad Hriz, Berrechid</p>
-                    <p class="education-date">2019 - 2020</p>
-                </div>
-            </div>
-        </div>
-        <div class="education-column">
-            <h3 class="column-title" data-translate="education_certs_title"><i class="fa-solid fa-award"></i> Certifications</h3>
-              <ul class="certification-list">
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/VQR2HJM5EKG9" target="_blank"><span>Java and Object-Oriented Programming (University of Pennsylvania)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/YQWAJBRGQ6JW" target="_blank"><span>Modeling Software Systems (The Hong Kong University)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/HMVUGV6RCE28" target="_blank"><span>Conteneurs avec Docker, Kubernetes et OpenShift (IBM)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/BOJU9JK0VBM3" target="_blank"><span>Machine Learning with Python (IBM)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/QAVMD3TV49GE" target="_blank"><span>React Native (Meta)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/QV3Q4URHKUK7" target="_blank"><span>React Basics (Meta)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/0MUV1Q3MLBFK" target="_blank"><span>Building Scalable Java Microservices (Google Cloud)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/RHFYFER58FT4" target="_blank"><span>Introduction to Git and GitHub (Google)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SSDUDJPEUF8F" target="_blank"><span>Python for Everybody Specialization (University of Michigan)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-                <li><a href="https://www.coursera.org/account/accomplishments/certificate/FCVWHZJRWHAT" target="_blank"><span>The Art of the Job Interview (Big Interview)</span><i class="fa-solid fa-up-right-from-square"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</section>
 
-<section class="projects" id="projects">
-    <h2 class="heading" data-translate="projects_heading">Mes <span>Projets</span></h2>
-    <div class="projects-container">
-        <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project1_title">Plateforme d'Assistance Médicale Intelligente</h4>
-                <p data-translate="project1_desc">Développement d’une plateforme intégrant un LLM pour aider les patients à obtenir des réponses intelligentes à leurs symptômes.</p>
-                <div class="project-tech">
-                    <span>Spring Boot</span><span>Spring Cloud</span><span>JWT</span><span>Kafka</span><span>LLM</span><span>MySQL</span><span>Resilience4J</span>
+            <!-- ==================== COLONNE CERTIFICATIONS (GRILLE 3x3) ==================== -->
+            <div class="education-column">
+                <h3 class="column-title" data-translate="education_certs_title"><i class="fa-solid fa-award"></i> Certifications</h3>
+                <div class="certification-grid">
+                    <!-- Certification 1 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/VQR2HJM5EKG9" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Java and Object-Oriented Programming</h4>
+                                <p>University of Pennsylvania</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 2 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/YQWAJBRGQ6JW" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Modeling Software Systems</h4>
+                                <p>The Hong Kong University</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 3 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/HMVUGV6RCE28" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Conteneurs avec Docker, Kubernetes et OpenShift</h4>
+                                <p>IBM</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 4 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/BOJU9JK0VBM3" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Machine Learning with Python</h4>
+                                <p>IBM</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 5 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/QAVMD3TV49GE" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>React Native</h4>
+                                <p>Meta</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Certification 6 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/QV3Q4URHKUK7" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>React Basics</h4>
+                                <p>Meta</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 7 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/0MUV1Q3MLBFK" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Building Scalable Java Microservices</h4>
+                                <p>Google Cloud</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 8 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/RHFYFER58FT4" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Introduction to Git and GitHub</h4>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 9 -->
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/SSDUDJPEUF8F" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>Python for Everybody Specialization</h4>
+                                <p>University of Michigan</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Certification 10 -->
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/FCVWHZJRWHAT" target="_blank" class="certification-item">
+                        <div class="cert-header">
+                            <i class="fa-solid fa-ribbon cert-icon"></i>
+                            <div class="cert-text">
+                                <h4>The Art of the Job Interview</h4>
+                                <p>Big Interview</p>
+                            </div>
+                        </div>
+                        <div class="cert-link">
+                            <i class="fa-solid fa-up-right-from-square cert-link-icon"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project2_title">Sales Management</h4>
-                <p data-translate="project2_desc">Application web de gestion des ventes avec authentification sécurisée et tableau de bord.</p>
-                <div class="project-tech">
-                    <span>Spring Boot</span><span>Spring Cloud</span><span>Angular</span><span>JWT</span><span>MySQL</span><span>Tailwind CSS</span>
-                </div>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project3_title">Application Flutter de Détection de Fruits</h4>
-                <p data-translate="project3_desc">Application mobile de reconnaissance d’images de fruits à l’aide d’un modèle d’intelligence artificielle.</p>
-                <div class="project-tech">
-                    <span>Flutter</span><span>TensorFlow Lite</span><span>Python</span><span>Keras</span><span>Firebase</span>
-                </div>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project4_title">Application de Gestion de Tâches</h4>
-                <p data-translate="project4_desc">Application de gestion de tâches avec authentification sécurisée via Keycloak et interface web responsive.</p>
-                <div class="project-tech">
-                    <span>Spring Boot</span><span>Keycloak</span><span>OAuth2</span><span>MySQL</span><span>Thymeleaf</span>
-                </div>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project5_title">Plateforme E-Vêtements</h4>
-                <p data-translate="project5_desc">Développement d’une plateforme e-commerce simple dédiée à la vente de vêtements.</p>
-                <div class="project-tech">
-                    <span>Django</span><span>Python</span><span>MySQL</span><span>Bootstrap 5</span><span>JavaScript</span>
-                </div>
-            </div>
-        </div>
-         <div class="projects-box">
-            <div class="project-content">
-                <h4 data-translate="project6_title">E-Credit Management</h4>
-                <p data-translate="project6_desc">Projet CRUD de gestion de crédit développé en ASP.NET, offrant une interface conviviale pour gérer efficacement les demandes de crédit. </p>
-                <div class="project-tech">
-                    <span>ASP.NET</span><span>MVC</span><span>C#</span><span>Bootstrap 5</span><span>Microsoft SQL Server</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 <section class="additional-info" id="additional-info">
     <h2 class="heading" data-translate="additional_info_heading">Plus d'<span>Infos</span></h2>
@@ -380,7 +471,17 @@
 <footer class="footer">
     <div class="footer-text">
         <p data-translate="footer_text">&copy; 2025 Hamza Abid | Tous droits réservés.</p>
+        
+        <!-- Un conteneur pour aligner l'email et les icônes sociales -->
+        <div class="footer-links">
+            <a href="mailto:hamza.abid4323@gmail.com"><i class="fa-solid fa-envelope"></i> hamza.abid4323@gmail.com</a>
+            <div class="footer-social-icons">
+                <a href="https://github.com/HamzaAbid1" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hamza-abid1/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
     </div>
+    
     <div class="footer-iconTop">
         <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
     </div>

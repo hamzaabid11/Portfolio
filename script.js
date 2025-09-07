@@ -115,7 +115,12 @@ const translations = {
         home_download_cv_button: "Télécharger mon CV <i class='fa-solid fa-download'></i>",
         about_heading: "À Propos de <span>Moi</span>",
         about_subtitle: "Développeur Full-Stack",
-        about_p1: "Ingénieur en Informatique et Réseaux, je suis un développeur Full-Stack passionné par l’innovation, avec une double expertise en applications web et mobiles. Mon parcours m’a permis de concevoir et de déployer des projets concrets en Java/Spring Boot, Angular, React et Flutter, en intégrant APIs, sécurité, performance et expérience utilisateur. Animé par la curiosité et le goût du défi, je m’investis pleinement dans chaque projet, en favorisant la collaboration, l’apprentissage continu et la recherche de solutions à forte valeur ajoutée.",
+        about_p1: "Ingénieur en Informatique et Réseaux, je suis un développeur Full-Stack passionné par l’innovation, avec une double expertise en applications web et mobiles. Mon parcours m’a permis de concevoir et de déployer des projets concrets en Java/Spring Boot, Angular, React et Flutter.",
+        about_p2: "Animé par la curiosité et le goût du défi, je m’investis pleinement dans chaque projet, en favorisant la collaboration, l’apprentissage continu et la recherche de solutions à forte valeur ajoutée.",
+        // ... (autres traductions)
+       
+        footer_linkedin: "LinkedIn",
+         footer_text: "&copy; 2025 Hamza Abid | Tous droits réservés.",
         experience_heading: "Parcours <span>Professionnel</span>",
         exp1_title: "Développeur Full-Stack Mobile Flutter",
         exp1_date: "<i class='fa-solid fa-calendar-alt'></i> Fév 2025 - Juil 2025",
@@ -210,7 +215,12 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         home_download_cv_button: "Download my CV <i class='fa-solid fa-download'></i>",
         about_heading: "About <span>Me</span>",
         about_subtitle: "Full-Stack Developer",
-        about_p1: "As a Computer Science and Networks Engineer, I am a Full-Stack developer passionate about innovation, with dual expertise in web and mobile applications. My journey has allowed me to design and deploy concrete projects using Java/Spring Boot, Angular, React, and Flutter, integrating APIs, security, performance, and user experience. Driven by curiosity and a love for challenges, I fully commit to each project, promoting collaboration, continuous learning, and the search for high-value solutions.",
+       about_p1: "As a Computer Science and Networks Engineer, I am a Full-Stack developer passionate about innovation, with dual expertise in web and mobile applications. My journey has allowed me to design and deploy concrete projects using Java/Spring Boot, Angular, React, and Flutter.",
+        about_p2: "Driven by curiosity and a love for challenges, I fully commit to each project, promoting collaboration, continuous learning, and the search for high-value solutions.",
+        // ... (autres traductions)
+       
+        footer_linkedin: "LinkedIn",
+        footer_text: "&copy; 2025 Hamza Abid | All rights reserved.",
         experience_heading: "Professional <span>Experience</span>",
         exp1_title: "Full-Stack Mobile Flutter Developer",
         exp1_date: "<i class='fa-solid fa-calendar-alt'></i> Feb 2025 - Jul 2025",
@@ -305,7 +315,12 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         home_download_cv_button: "تحميل سيرتي الذاتية <i class='fa-solid fa-download'></i>",
         about_heading: "<span>عني</span>",
         about_subtitle: "مطور فول ستاك",
-        about_p1: "مهندس في الإعلاميات والشبكات، أنا مطور فول ستاك شغوف بالابتكار، ولدي خبرة مزدوجة في تطبيقات الويب والموبايل. أتاح لي مساري المهني تصميم ونشر مشاريع ملموسة باستخدام Java/Spring Boot، Angular، React، وFlutter، مع دمج واجهات برمجة التطبيقات، والأمان، والأداء، وتجربة المستخدم. بدافع من الفضول وحب التحدي، أستثمر نفسي بالكامل في كل مشروع، معززًا التعاون والتعلم المستمر والبحث عن حلول ذات قيمة مضافة عالية.",
+        about_p1: "مهندس في الإعلاميات والشبكات، أنا مطور فول ستاك شغوف بالابتكار، ولدي خبرة مزدوجة في تطبيقات الويب والموبايل. أتاح لي مساري المهني تصميم ونشر مشاريع ملموسة باستخدام Java/Spring Boot، Angular، React، وFlutter.",
+        about_p2: "بدافع من الفضول وحب التحدي، أستثمر نفسي بالكامل في كل مشروع، معززًا التعاون والتعلم المستمر والبحث عن حلول ذات قيمة مضافة عالية.",
+        // ... (autres traductions)
+       
+        footer_linkedin: "لينكد إن",
+        footer_text: "© 2025 حمزة عبيد | جميع الحقوق محفوظة.",
         experience_heading: "المسار <span>المهني</span>",
         exp1_title: "مطور فول ستاك لتطبيقات الموبايل بفلاتر",
         exp1_date: "<i class='fa-solid fa-calendar-alt'></i> فبراير 2025 - يوليو 2025",
@@ -418,7 +433,23 @@ const setLanguage = (lang) => {
 selectedLang.addEventListener('click', () => {
     langSwitcher.classList.toggle('active');
 });
+// SUPPRIMEZ CE BLOC DE CODE
+// ===== GESTION DES COMPÉTENCES INTERACTIVES (ACCORDÉON) =====
+const skillsBoxes = document.querySelectorAll('.skills-box');
 
+skillsBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+        // Ferme toutes les autres boîtes ouvertes
+        skillsBoxes.forEach(otherBox => {
+            if (otherBox !== box && otherBox.classList.contains('active')) {
+                otherBox.classList.remove('active');
+            }
+        });
+        // Ouvre ou ferme la boîte cliquée
+        box.classList.toggle('active');
+    });
+});
+// FIN DU BLOC À SUPPRIMER
 langOptions.forEach(option => {
     option.addEventListener('click', () => {
         const lang = option.getAttribute('data-lang');
