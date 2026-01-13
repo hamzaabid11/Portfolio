@@ -120,7 +120,7 @@ const translations = {
         // ... (autres traductions)
        
         footer_linkedin: "LinkedIn",
-         footer_text: "&copy; 2025 Hamza Abid | Tous droits réservés.",
+         footer_text: "&copy; 2026 Hamza Abid | Tous droits réservés.",
         experience_heading: "Parcours <span>Professionnel</span>",
         exp1_title: "Développeur Full-Stack Mobile Flutter",
         //exp1_date: "<i class='fa-solid fa-calendar-alt'></i> Juil 2025 - Sept 2025",
@@ -178,7 +178,10 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         project5_title: "Plateforme E-Vêtements",
         project5_desc: "Développement d’une plateforme e-commerce simple dédiée à la vente de vêtements.",
         project6_title: "E-Credit Management",
+        
         project6_desc: "Projet CRUD de gestion de crédit développé en ASP.NET, offrant une interface conviviale pour gérer efficacement les demandes de crédit.",
+        project7_title: "Job Tracker",
+        project7_desc: "Application web pour suivre et gérer les candidatures d'emploi, avec pipeline CI/CD automatisé et monitoring.", 
         additional_info_heading: "Plus d'<span>Infos</span>",
         tab_soft_skills: "Soft Skills",
         ss_autonomy: "Autonomie",
@@ -200,7 +203,7 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         contact_form_subject_label: "Sujet",
         contact_form_message_label: "Votre Message",
         contact_form_button: "Envoyer le Message <i class='fa-solid fa-paper-plane'></i>",
-        footer_text: "&copy; 2025 Hamza Abid | Tous droits réservés."
+        footer_text: "&copy; 2026 Hamza Abid | Tous droits réservés."
     },
     en: {
         page_title: "Portfolio | Hamza Abid",
@@ -222,7 +225,7 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         // ... (autres traductions)
        
         footer_linkedin: "LinkedIn",
-        footer_text: "&copy; 2025 Hamza Abid | All rights reserved.",
+        footer_text: "&copy; 2026 Hamza Abid | All rights reserved.",
         experience_heading: "Professional <span>Experience</span>",
         exp1_title: "Full-Stack Mobile Flutter Developer",
         //exp1_date: "<i class='fa-solid fa-calendar-alt'></i> Jul 2025 - Sep 2025",
@@ -281,6 +284,8 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         project5_desc: "Development of a simple e-commerce platform dedicated to selling clothes.",
         project6_title: "E-Credit Management",
         project6_desc: "CRUD project for credit management developed using ASP.NET, providing a user-friendly interface for efficiently managing credit requests.",
+        project7_title: "Job Tracker",
+        project7_desc: "Web application to track and manage job applications, with an automated CI/CD pipeline and monitoring.",
         additional_info_heading: "More <span>Info</span>",
         tab_soft_skills: "Soft Skills",
         ss_autonomy: "Autonomy",
@@ -302,7 +307,7 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         contact_form_subject_label: "Subject",
         contact_form_message_label: "Your Message",
         contact_form_button: "Send Message <i class='fa-solid fa-paper-plane'></i>",
-        footer_text: "&copy; 2025 Hamza Abid | All rights reserved."
+        footer_text: "&copy; 2026 Hamza Abid | All rights reserved."
     },
     ar: {
         page_title: "ملف أعمال | حمزة عبيد",
@@ -324,7 +329,7 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         // ... (autres traductions)
        
         footer_linkedin: "لينكد إن",
-        footer_text: "© 2025 حمزة عبيد | جميع الحقوق محفوظة.",
+        footer_text: "© 2026 حمزة عبيد | جميع الحقوق محفوظة.",
         experience_heading: "المسار <span>المهني</span>",
         exp1_title: "مطور فول ستاك لتطبيقات الموبايل بفلاتر",
         //exp1_date: "<i class='fa-solid fa-calendar-alt'></i> يوليو 2025 - سبتمبر 2025",
@@ -383,6 +388,8 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         project5_desc: "تطوير منصة تجارة إلكترونية بسيطة مخصصة لبيع الملابس.",
         project6_title: "إدارة القروض إلكترونياً",
         project6_desc: "مشروع CRUD لإدارة القروض مطوّر باستخدام ASP.NET، يوفر واجهة سهلة الاستخدام لإدارة طلبات القروض بكفاءة.",
+        project7_title: "متتبع الوظائف",
+        project7_desc: "تطبيق ويب لتتبع وإدارة طلبات التوظيف، مع خط أنابيب CI/CD مؤتمت ونظام مراقبة.",
         additional_info_heading: "<span>معلومات إضافية</span>",
         tab_soft_skills: "المهارات الشخصية",
         ss_autonomy: "الاستقلالية",
@@ -404,7 +411,7 @@ skills_devops_desc: "Docker, Kubernetes, CI/CD Pipelines.", // NOUVEAU
         contact_form_subject_label: "الموضوع",
         contact_form_message_label: "رسالتك",
         contact_form_button: "إرسال الرسالة <i class='fa-solid fa-paper-plane'></i>",
-        footer_text: "© 2025 حمزة عبيد | جميع الحقوق محفوظة."
+        footer_text: "© 2026 حمزة عبيد | جميع الحقوق محفوظة."
     }
 };
 
